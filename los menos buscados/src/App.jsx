@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 
+import Login from "./components/Login";
+import Registro from "./components/Registro";
+import ModalDetalle from "./components/ModalDetalle";
 function App() {
   const [loginUsuario, setLoginUsuario] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
