@@ -1,25 +1,23 @@
 import { useState } from "react";
 import "./App.css";
 
-import Login from "./components/Login";
-import Registro from "./components/Registro";
-import ModalDetalle from "./components/ModalDetalle";
+import Login from "./Components/Login";
+import Registro from "./Components/Registro";
+import ModalDetalle from "./Components/ventana";
+
 function App() {
   const [loginUsuario, setLoginUsuario] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-
+  const [loginContrasena, setLoginContrasena] = useState("");
   const [registroCorreo, setRegistroCorreo] = useState("");
   const [registroUsuario, setRegistroUsuario] = useState("");
-  const [registroPassword, setRegistroPassword] = useState("");
-
+  const [registroContrasena, setRegistroContrasena] = useState("");
   const [logueado, setLogueado] = useState(false);
   const [ventanaActiva, setVentanaActiva] = useState(null);
 
   const registrarse = () => {
     localStorage.setItem("correo", registroCorreo);
     localStorage.setItem("usuario", registroUsuario);
-    localStorage.setItem("password", registroPassword);
-
+    localStorage.setItem("password", registroContrasena);
     alert("Usuario registrado");
   };
 
@@ -27,10 +25,7 @@ function App() {
     const usuarioGuardado = localStorage.getItem("usuario");
     const passwordGuardada = localStorage.getItem("password");
 
-    if (
-      loginUsuario === usuarioGuardado &&
-      loginPassword === passwordGuardada
-    ) {
+    if (loginUsuario === usuarioGuardado && loginContrasena === passwordGuardada) {
       alert("Inicio de sesión correcto");
       setLogueado(true);
     } else {
@@ -38,122 +33,86 @@ function App() {
     }
   };
 
-  const datos = [
+const datos = [
   {
     id: 1,
     img: "/imagenes/1.jpg",
     nombre: "ARON ROA",
     descripcion:
-      "peligroso Inalador de azucar y azucar morena a este peligroso criminalse le a visto contrabandeando yogu yogus afuera de un instituto con altos niveles de azucar se recompensara con 3 yogu yogus al que pueda capturarlo"
+      "Peligroso inhalador de azúcar y azúcar morena. A este peligroso criminal se le ha visto contrabandeando Yogu Yogu afuera de un instituto, con altos niveles de azúcar. Se recompensará con 3 Yogu Yogu al que pueda capturarlo.",
   },
-
   {
     id: 2,
     img: "/imagenes/2.jpg",
     nombre: "ESTEBAN IBAÑEZ",
     descripcion:
-      "peligroso ludopata de zapatos este criminal pasa todo el dia apostando zapatos y acumulando deudas aquel que logre capturarlo recibira todas las deudas que a acumulado con los años pedimos su cooperacion"
+      "Peligroso ludópata de zapatos. Este criminal pasa todo el día apostando zapatos y acumulando deudas. Aquel que logre capturarlo recibirá todas las deudas que ha acumulado con los años. Pedimos su cooperación.",
   },
-
   {
     id: 3,
     img: "/imagenes/3.jpg",
     nombre: "BENJAMIN FUENTES",
     descripcion:
-      "los policias que vinieron de intercambio desde EEUU Nos han informado de este carterista que a estado robando una gran cantidad de celulares al que logre capturarlo se le entregara los celulares que alla robado"
+      "Los policías que vinieron de intercambio desde EE. UU. nos han informado de este carterista, que ha estado robando una gran cantidad de celulares. Al que logre capturarlo se le entregarán los celulares que haya robado.",
   },
-
   {
     id: 4,
     img: "/imagenes/4.jpg",
     nombre: "MIGUEL ESCOBAR",
     descripcion:
-      "este peligroso traficante de helados el cual a intentado venderle helado en estado puro a niños del la zona central de chile se el considera unos de los peores criminales del estado al que logre capturarlo se le recompensara con 2 uvas y 1 mandarina que estaba en mi refrigerador"
+      "Este peligroso traficante de helados ha intentado vender helado en estado puro a niños de la zona central de Chile. Se le considera uno de los peores criminales del Estado. Al que logre capturarlo se le recompensará con 2 uvas y 1 mandarina que estaban en mi refrigerador.",
   },
-
   {
     id: 5,
     img: "/imagenes/7.png",
     nombre: "HECTOR CAMPOS",
     descripcion:
-      "este criminal, acosador, machista, gunter y regetonero se le a visto decirle chancha a cada mujer que este ve ya tiene varias ordenes de restriccion por eso la recompensa por capturarlo es una chancha"
+      "Este criminal, acosador, machista, gunter y reguetonero, ha sido visto diciéndole 'chancha' a cada mujer que ve. Ya tiene varias órdenes de restricción. Por eso, la recompensa por capturarlo es una chancha.",
   },
-
   {
     id: 6,
     img: "/imagenes/8.png",
     nombre: "VÍCTOR VÁSQUEZ",
     descripcion:
-      "este peligroso criminal es el lider espiritual del ku klux klan y ademas un profesor en un instituto el cual a llevado hasta la desesperacion mas grandes a sus alumnos con preguntas tan difisiles que ni siquiera el propio Albert Einstein podria responder la recompensa por capturarlo es pasar el curso"
+      "Este peligroso criminal es el líder espiritual del Ku Klux Klan y, además, un profesor en un instituto, el cual ha llevado a la desesperación más grande a sus alumnos con preguntas tan difíciles que ni siquiera el propio Albert Einstein podría responder. La recompensa por capturarlo es pasar el curso.",
   },
-
   {
     id: 7,
     img: "/imagenes/5.jpg",
     nombre: "NICOLAS MADURO",
     descripcion:
-      "este criminal llamado nicolas maduro es el presidente mas corrupto de la historia de venezuela el cual posee la habilidad de multiplicar los penes ya fue capturado por las fuerzas especiales de EEUU actualmente se encuentra en una prision de maxima seguridad la recompensa por capturarlo fue venezuela"
+      "Este criminal llamado Nicolás Maduro es el presidente más corrupto de la historia de Venezuela, el cual posee la habilidad de multiplicar los penes. Ya fue capturado por las fuerzas especiales de EE. UU. Actualmente se encuentra en una prisión de máxima seguridad. La recompensa por capturarlo fue Venezuela.",
   },
-
   {
     id: 8,
     img: "/imagenes/6.jpg",
     nombre: "CHUCK NORRIS",
     descripcion:
-      "no se quien a ya sido el estupido que haya puesto a chuck norris en esta lista pero lo unico que puedo decir es que pobre del pendejo que intente ir a capturarlo la recompensa por esa ofensa es la posinilidade de no morir asi sin mas ahora repasemos algunas hasañas de nuestra deidad chuck norris. En una ocasión, la muerte tuvo una experiencia cercana a Chuck Norris, Chuck Norris se pasó todos los Metal Slug con una sola moneda de 1 centavo, Las lágrimas de Chuck Norris curan el cáncer. El problema es que él nunca llora, Chuck Norris ha contado hasta el número infinito. Dos veces"
-  }
+      "No sé quién ha sido el estúpido que puso a Chuck Norris en esta lista, pero lo único que puedo decir es: pobre del pendejo que intente ir a capturarlo. La recompensa por esa ofensa es la posibilidad de no morir. Así, sin más, ahora repasemos algunas hazañas de nuestra deidad Chuck Norris. En una ocasión, la muerte tuvo una experiencia cercana a Chuck Norris. Chuck Norris se pasó todos los Metal Slug con una sola moneda de 1 centavo. Las lágrimas de Chuck Norris curan el cáncer. El problema es que él nunca llora. Chuck Norris ha contado hasta el infinito. Dos veces.",
+  },
 ];
 
   return (
     <>
       {!logueado && (
         <div className="login-contenedor">
-          <h1 className="titulo2">INICIAR SESIÓN</h1>
-
-          <input
-            type="text"
-            placeholder="Usuario"
-            value={loginUsuario}
-            onChange={(e) => setLoginUsuario(e.target.value)}
+          <Login
+            loginUsuario={loginUsuario}
+            setLoginUsuario={setLoginUsuario}
+            loginContrasena={loginContrasena}
+            setLoginContrasena={setLoginContrasena}
+            iniciarSesion={iniciarSesion}
           />
 
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={loginPassword}
-            onChange={(e) => setLoginPassword(e.target.value)}
+          <Registro
+            registroCorreo={registroCorreo}
+            setRegistroCorreo={setRegistroCorreo}
+            registroUsuario={registroUsuario}
+            setRegistroUsuario={setRegistroUsuario}
+            registroContrasena={registroContrasena}
+            setRegistroContrasena={setRegistroContrasena}
+            registrarse={registrarse}
           />
-
-          <button className="btn" onClick={iniciarSesion}>
-            Ingresar
-          </button>
-
-          <h1 className="titulo2">REGISTRO</h1>
-
-          <input
-            type="email"
-            placeholder="Correo"
-            value={registroCorreo}
-            onChange={(e) => setRegistroCorreo(e.target.value)}
-          />
-
-          <input
-            type="text"
-            placeholder="Usuario"
-            value={registroUsuario}
-            onChange={(e) => setRegistroUsuario(e.target.value)}
-          />
-
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={registroPassword}
-            onChange={(e) => setRegistroPassword(e.target.value)}
-          />
-
-          <button className="btn" onClick={registrarse}>
-            Registrarse
-          </button>
         </div>
       )}
 
@@ -165,58 +124,38 @@ function App() {
 
           <div className="hola">
             {datos.slice(0, 4).map((persona) => (
-              <img
+              <button
                 key={persona.id}
-                src={persona.img}
-                alt={persona.nombre}
+                type="button"
+                className="persona-button"
                 onClick={() => setVentanaActiva(persona)}
-              />
+                style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+              >
+                <img src={persona.img} alt={persona.nombre} />
+              </button>
             ))}
           </div>
 
           <div className="hola">
             {datos.slice(4, 8).map((persona) => (
-              <img
+              <button
                 key={persona.id}
-                src={persona.img}
-                alt={persona.nombre}
+                type="button"
+                className="persona-button"
                 onClick={() => setVentanaActiva(persona)}
-              />
+                style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+              >
+                <img src={persona.img} alt={persona.nombre} />
+              </button>
             ))}
           </div>
         </div>
       )}
 
-      {ventanaActiva && (
-        <div
-          className="ventana"
-          style={{ display: "block" }}
-        >
-          <div className="contenido">
-            <span
-              className="cerrar"
-              onClick={() => setVentanaActiva(null)}
-            >
-              &times;
-            </span>
-
-            <div className="info">
-              <img
-                src={ventanaActiva.img}
-                alt={ventanaActiva.nombre}
-              />
-
-              <div className="texto">
-                <h1>{ventanaActiva.nombre}</h1>
-
-                <p className="descripcion">
-                  {ventanaActiva.descripcion}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <ModalDetalle
+        ventanaActiva={ventanaActiva}
+        setVentanaActiva={setVentanaActiva}
+      />
     </>
   );
 }
