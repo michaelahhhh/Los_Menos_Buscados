@@ -1,0 +1,68 @@
+Ejemplos de evidencias de uso del agente (AI)
+
+1) Commit conciso
+- Mensaje: "fix: corregir import imagen en App.jsx (punblic -> public)"
+- Archivo modificado: `src/App.jsx`
+- Descripción breve en PR: "Corrige ruta de imagen rota y usa `/imagenes/fondo.jpg` desde public."
+
+2) Parche (diff) antes/después
+- Antes:
+  - `import hero from './punblic/images/fo.png'`
+- Después:
+  - `import hero from './assets/hero.png'`
+
+3) Archivo creado por el agente
+- Ruta: `evidencias_de_uso.txt` (este archivo)
+- Contenido: lista de acciones realizadas y ejemplos reproducibles
+
+4) Comandos ejecutados en terminal
+- `npm install`
+- `npm run dev`  -> verificar que Vite arranca sin errores
+- `npm run lint` -> salida esperada: "0 problems" o lista de advertencias
+
+5) Salida ejemplar de dev server (captura textual)
+- "VITE v4.x.x  ready in 300 ms"
+- "  Local: http://localhost:5173/"
+
+6) Resultado de lint (ejemplo)
+- `src/Componets/Login.jsx: Warning - 'Componets' carpeta contiene typo; revisar importaciones.`
+
+7) PR description template usado por el agente
+- Title: "fix: corregir rutas y renombrar carpeta `Componets` -> `Components`"
+- Body: "Qué se cambió, por qué, y pasos para probar: `npm run dev`, abrir /, comprobar imágenes y consola."
+
+8) Ejemplo de prueba funcional manual (pasos)
+- Abrir navegador en `http://localhost:5173/`
+- Confirmar que la imagen de fondo carga desde `/imagenes/fondo.jpg`
+- Interactuar con la interfaz (si aplica) y verificar HMR en consola
+
+9) Registro de cambios en código (fragmento de commit)
+- "Added implementation for `src/Components/Login.jsx`: form, validation, submit handler (mock)."
+
+10) Nota sobre convenciones del proyecto (detectadas)
+- Carpeta fuente: `src/` con `.jsx` para componentes
+- Archivos vacíos a completar: `src/Componets/Login.jsx`, `Registro.jsx`, `ventana.jsx`
+- Configuración: Vite + React Compiler (`vite.config.js`)
+
+11) Evidencia de pruebas rápidas (ejemplo de salida)
+- Linter: "eslint: 0 errors, 2 warnings"
+- Dev server: "hmr update applied to /src/App.jsx"
+
+12) Ejemplo de mensaje de rollback / revert
+- "revert: undo accidental rename of public assets path; restore previous imports"
+
+13) Logs de build (ejemplo)
+- `npm run build` → "build completed in 1.2s — dist/ size: 128 KB"
+
+14) Artefactos que el agente puede adjuntar en PR
+- Diffs (unified patch)
+- Salida de `npm run dev` (texto)
+- Resultado de `npm run lint`
+- Lista de archivos añadidos/modificados
+
+15) Instrucciones rápidas que dejó el agente en el PR
+- Cómo reproducir localmente: comandos `npm install` y `npm run dev`
+- Qué revisar: rutas de import, warnings de consola, carga de assets
+
+---
+Si necesitas que adapte el formato (CSV, JSON, o añadir capturas de salida reales) dímelo y lo agrego.
