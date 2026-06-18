@@ -42,63 +42,63 @@ function App() {
 const datos = [
   {
     id: 1,
-    img: "/imagenes/1.jpg",
+    img: "../src/assets/imagenes/1.jpg",
     nombre: "ARON ROA",
     descripcion:
       "Peligroso inhalador de azúcar y azúcar morena. A este peligroso criminal se le ha visto contrabandeando Yogu Yogu afuera de un instituto, con altos niveles de azúcar. Se recompensará con 3 Yogu Yogu al que pueda capturarlo.",
   },
   {
     id: 2,
-    img: "/imagenes/2.jpg",
+    img: "../src/assets/imagenes/2.jpg",
     nombre: "ESTEBAN IBAÑEZ",
     descripcion:
       "Peligroso ludópata de zapatos. Este criminal pasa todo el día apostando zapatos y acumulando deudas. Aquel que logre capturarlo recibirá todas las deudas que ha acumulado con los años. Pedimos su cooperación.",
   },
   {
     id: 3,
-    img: "/imagenes/3.jpg",
+    img: "../src/assets/imagenes/3.jpg",
     nombre: "BENJAMIN FUENTES",
     descripcion:
       "Los policías que vinieron de intercambio desde EE. UU. nos han informado de este carterista, que ha estado robando una gran cantidad de celulares. Al que logre capturarlo se le entregarán los celulares que haya robado.",
   },
   {
     id: 4,
-    img: "/imagenes/4.jpg",
+    img: "../src/assets/imagenes/4.jpg",
     nombre: "MIGUEL ESCOBAR",
     descripcion:
       "Este peligroso traficante de helados ha intentado vender helado en estado puro a niños de la zona central de Chile. Se le considera uno de los peores criminales del Estado. Al que logre capturarlo se le recompensará con 2 uvas y 1 mandarina que estaban en mi refrigerador.",
   },
   {
     id: 5,
-    img: "/imagenes/7.png",
+    img: "../src/assets/imagenes/7.png",
     nombre: "HECTOR CAMPOS",
     descripcion:
-      "Este criminal, acosador, machista, gunter y reguetonero, ha sido visto diciéndole 'chancha' a cada mujer que ve. Ya tiene varias órdenes de restricción. Por eso, la recompensa por capturarlo es una chancha.",
+      "Este criminal, acosador, machista, gunter y reguetonero, ha sido visto diciéndole 'chancha' a cada mujer que ve. Ya tiene varias órdenes de restricción. Por eso, la recompensa por capturarlo es una chancha actualizacion se le a visto a este criminal suplicandole a una tal noelle se dise que incluso se le acabo el piso para arrastrarse y a empezado a cavar por ende su recompensa aumenta a una migaja y 1 palo.",
   },
   {
     id: 6,
-    img: "/imagenes/8.png",
+    img: "../src/assets/imagenes/8.png",
     nombre: "VÍCTOR VÁSQUEZ",
     descripcion:
       "Este peligroso criminal es el líder espiritual del Ku Klux Klan y, además, un profesor en un instituto, el cual ha llevado a la desesperación más grande a sus alumnos con preguntas tan difíciles que ni siquiera el propio Albert Einstein podría responder. La recompensa por capturarlo es pasar el curso.",
   },
   {
     id: 7,
-    img: "/imagenes/5.jpg",
+    img: "../src/assets/imagenes/5.jpg",
     nombre: "NICOLAS MADURO",
     descripcion:
       "Este criminal llamado Nicolás Maduro es el presidente más corrupto de la historia de Venezuela, el cual posee la habilidad de multiplicar los penes. Ya fue capturado por las fuerzas especiales de EE. UU. Actualmente se encuentra en una prisión de máxima seguridad. La recompensa por capturarlo fue Venezuela.",
   },
   {
     id: 8,
-    img: "/imagenes/6.jpg",
+    img: "../src/assets/imagenes/6.jpg",
     nombre: "CHUCK NORRIS",
     descripcion:
       "No sé quién ha sido el estúpido que puso a Chuck Norris en esta lista, pero lo único que puedo decir es: pobre del pendejo que intente ir a capturarlo. La recompensa por esa ofensa es la posibilidad de no morir. Así, sin más, ahora repasemos algunas hazañas de nuestra deidad Chuck Norris. En una ocasión, la muerte tuvo una experiencia cercana a Chuck Norris. Chuck Norris se pasó todos los Metal Slug con una sola moneda de 1 centavo. Las lágrimas de Chuck Norris curan el cáncer. El problema es que él nunca llora. Chuck Norris ha contado hasta el infinito. Dos veces.",
   },
   {
     id: 9,
-    img: "/imagenes/9.jpg",
+    img: "../src/assets/imagenes/9.jpg",
     nombre: "ale",
     descripcion:
       "este peligroso regetonero ha sido visto conquistando a chicas mas jovenes que el gracias a sua apriencia de niño rata, su ultima victima fue una chica de primero medio el saliendo de la media, se le considera un peligro para la sociedad, por eso se le recompensa con una maruchan y 3 pesos para el que logre capturarlo.",
