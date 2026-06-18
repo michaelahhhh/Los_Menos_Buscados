@@ -70,10 +70,10 @@ const datos = [
   },
   {
     id: 5,
-    img: "../src/assets/imagenes/7.png",
+    img: "../src/assets/imagenes/7.jpg",
     nombre: "HECTOR CAMPOS",
     descripcion:
-      "Este criminal, acosador, machista, gunter y reguetonero, ha sido visto diciéndole 'chancha' a cada mujer que ve. Ya tiene varias órdenes de restricción. Por eso, la recompensa por capturarlo es una chancha actualizacion se le a visto a este criminal suplicandole a una tal noelle se dise que incluso se le acabo el piso para arrastrarse y a empezado a cavar por ende su recompensa aumenta a una migaja y 1 palo.",
+      "se le a visto a este criminal suplicandole a una tal noelle se dise que incluso se le acabo el piso para arrastrarse y a empezado a construir su propio piso cuando se le le acabo a empezado a cavar por ende su recompensa aumenta a una migaja y 1 palo.",
   },
   {
     id: 6,
@@ -99,6 +99,28 @@ const datos = [
   {
     id: 9,
     img: "../src/assets/imagenes/9.jpg",
+    nombre: "ale",
+    descripcion:
+      "este peligroso regetonero ha sido visto conquistando a chicas mas jovenes que el gracias a sua apriencia de niño rata, su ultima victima fue una chica de primero medio el saliendo de la media, se le considera un peligro para la sociedad, por eso se le recompensa con una maruchan y 3 pesos para el que logre capturarlo.",
+  },
+   {
+    id: 10,
+    img: "../src/assets/imagenes/10.jpg",
+    nombre: "ale",
+    descripcion:
+      "este peligroso regetonero ha sido visto conquistando a chicas mas jovenes que el gracias a sua apriencia de niño rata, su ultima victima fue una chica de primero medio el saliendo de la media, se le considera un peligro para la sociedad, por eso se le recompensa con una maruchan y 3 pesos para el que logre capturarlo.",
+  },
+   {
+    id: 11,
+    img: "../src/assets/imagenes/11.jpg",
+    nombre: "ale",
+    descripcion:
+      "este peligroso regetonero ha sido visto conquistando a chicas mas jovenes que el gracias a sua apriencia de niño rata, su ultima victima fue una chica de primero medio el saliendo de la media, se le considera un peligro para la sociedad, por eso se le recompensa con una maruchan y 3 pesos para el que logre capturarlo.",
+  },
+  //profe luis iluminati 
+   {
+    id: 12,
+    img: "../src/assets/imagenes/12.jpg",
     nombre: "ale",
     descripcion:
       "este peligroso regetonero ha sido visto conquistando a chicas mas jovenes que el gracias a sua apriencia de niño rata, su ultima victima fue una chica de primero medio el saliendo de la media, se le considera un peligro para la sociedad, por eso se le recompensa con una maruchan y 3 pesos para el que logre capturarlo.",
