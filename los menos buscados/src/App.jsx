@@ -13,8 +13,13 @@ function App() {
   const [registroContrasena, setRegistroContrasena] = useState("");
   const [logueado, setLogueado] = useState(false);
   const [ventanaActiva, setVentanaActiva] = useState(null);
+  const [pagina, setPagina] = useState(0);
 
   const registrarse = () => {
+      if (!registroCorreo.includes("@") || !registroCorreo.includes(".")) {
+      alert("Ingrese un correo válido");
+      return;
+    }
     localStorage.setItem("correo", registroCorreo);
     localStorage.setItem("usuario", registroUsuario);
     localStorage.setItem("password", registroContrasena);
@@ -22,6 +27,7 @@ function App() {
   };
 
   const iniciarSesion = () => {
+
     const usuarioGuardado = localStorage.getItem("usuario");
     const passwordGuardada = localStorage.getItem("password");
 
@@ -90,8 +96,18 @@ const datos = [
     descripcion:
       "No sé quién ha sido el estúpido que puso a Chuck Norris en esta lista, pero lo único que puedo decir es: pobre del pendejo que intente ir a capturarlo. La recompensa por esa ofensa es la posibilidad de no morir. Así, sin más, ahora repasemos algunas hazañas de nuestra deidad Chuck Norris. En una ocasión, la muerte tuvo una experiencia cercana a Chuck Norris. Chuck Norris se pasó todos los Metal Slug con una sola moneda de 1 centavo. Las lágrimas de Chuck Norris curan el cáncer. El problema es que él nunca llora. Chuck Norris ha contado hasta el infinito. Dos veces.",
   },
+  {
+    id: 9,
+    img: "/imagenes/9.jpg",
+    nombre: "ale",
+    descripcion:
+      "este peligroso regetonero ha sido visto conquistando a chicas mas jovenes que el gracias a sua apriencia de niño rata, su ultima victima fue una chica de primero medio el saliendo de la media, se le considera un peligro para la sociedad, por eso se le recompensa con una maruchan y 3 pesos para el que logre capturarlo.",
+  },
 ];
-
+  const cartelesPorPagina = 8;
+  const cartelesMostrados = datos.slice
+    (pagina * cartelesPorPagina, 
+    (pagina + 1) * cartelesPorPagina);
   return (
     <>
       {!logueado && (
@@ -122,33 +138,34 @@ const datos = [
             <h1 className="titulo2">CARTELES DE SE BUSCA</h1>
           </header>
 
-          <div className="hola">
-            {datos.slice(0, 4).map((persona) => (
-              <button
-                key={persona.id}
-                type="button"
-                className="persona-button"
-                onClick={() => setVentanaActiva(persona)}
-                style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
-              >
-                <img src={persona.img} alt={persona.nombre} />
-              </button>
-            ))}
+        <div className="hola">
+          {cartelesMostrados.map((persona) => (
+            <button
+              key={persona.id}
+              type="button"
+              className="persona-button"
+              onClick={() => setVentanaActiva(persona)}
+              style={{ 
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "pointer" 
+              }}
+            >
+              <img src={persona.img} alt={persona.nombre} />
+            </button>
+          ))}
+          </div>
+          <div className="paginacion">
+            <button onClick={() => setPagina(pagina - 1)} 
+            disabled={pagina === 0}
+            >Anterior</button>
+            <button onClick={() => setPagina(pagina + 1)} 
+            disabled={(pagina + 1) * cartelesPorPagina >= datos.length}
+            >Siguiente</button>
+
           </div>
 
-          <div className="hola">
-            {datos.slice(4, 8).map((persona) => (
-              <button
-                key={persona.id}
-                type="button"
-                className="persona-button"
-                onClick={() => setVentanaActiva(persona)}
-                style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
-              >
-                <img src={persona.img} alt={persona.nombre} />
-              </button>
-            ))}
-          </div>
         </div>
       )}
 
